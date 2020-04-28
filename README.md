@@ -16,7 +16,7 @@ This directory contains initial work with Python:
 10. Technical Interview Preparation:
 Without help of Google, writing a C program to check if singly linked list contains a cycle
 
-##0x01-python-if_else_loops_functions
+## 0x01-python-if_else_loops_functions
 This directory contains initial work with Python loops and conditional statements in functions.
 0. Completing Python code to print whether the number stored in a variable is positive or negative
 1. Completing Python code to print the last digit of a number stored in a variable
