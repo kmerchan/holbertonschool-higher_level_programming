@@ -7,22 +7,19 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *holder = list;
-	listint_t *mover = holder;
-	int counter = 0, i = 0;
+	listint_t *rabbit;
 
 	if (list == NULL)
 		return (0);
-	while (list != NULL)
+	if (list->next == NULL)
+		return (0);
+	rabbit = list;
+	while (rabbit->next != NULL && rabbit->next->next != NULL)
 	{
 		list = list->next;
-		counter++;
-		mover = holder;
-		for (i = 0; i < counter; i++)
-		{
-			if (list == mover)
-				return (1);
-		}
+		rabbit = rabbit->next->next;
+		if (list == rabbit)
+			return (1);
 	}
 	return (0);
 }
