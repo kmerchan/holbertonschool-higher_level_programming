@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void set_newnode(listint_t **previous, listint_t **newnode);
+
 /**
  * insert_node - function to insert new node in sorted linked list
  * @head: input pointer to head pointer of singly linked list
@@ -27,8 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	if ((*head)->n > number)
 	{
-		newnode->next = (*head);
-		(*head) = newnode;
+		set_newnode(head, &newnode);
 		return (*head);
 	}
 	turtle = (*head);
@@ -40,14 +41,12 @@ listint_t *insert_node(listint_t **head, int number)
 			turtle = rabbit;
 		else if (turtle->next->n < number)
 		{
-			newnode->next = turtle->next->next;
-			turtle->next->next = newnode;
+			set_newnode(&turtle->next, &newnode);
 			return (newnode);
 		}
 		else if (turtle->n < number)
 		{
-			newnode->next = turtle->next;
-			turtle->next = newnode;
+			set_newnode(&turtle, &newnode);
 			return (newnode);
 		}
 	}
@@ -61,7 +60,17 @@ listint_t *insert_node(listint_t **head, int number)
 		rabbit->next->next = newnode;
 		return (newnode);
 	}
-	newnode->next = rabbit->next;
-	rabbit->next = newnode;
+	set_newnode(&rabbit, &newnode);
 	return (newnode);
+}
+
+/**
+ * set_newnode - function to set value of newnode
+ * @previous: input pointer to previous node pointer
+ * @newnode: input pointer to newnode pointer
+ */
+void set_newnode(listint_t **previous, listint_t **newnode)
+{
+	(*newnode)->next = (*previous)->next;
+	(*previous)->next = (*newnode);
 }
