@@ -56,7 +56,7 @@ listint_t *insert_node(listint_t **head, int number)
 		rabbit->next = newnode;
 		return (newnode);
 	}
-	if (rabbit->next->n >= number)
+	if (rabbit->next->n <= number)
 	{
 		rabbit->next->next = newnode;
 		return (newnode);
