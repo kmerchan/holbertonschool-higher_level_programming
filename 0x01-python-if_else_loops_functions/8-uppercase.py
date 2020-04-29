@@ -6,5 +6,4 @@ def uppercase(str):
         else:
             atoA = ord(str[i])
         print("{}".format(chr(atoA)), end='')
-        if i == (len(str) - 1):
-            print()
+    print()
