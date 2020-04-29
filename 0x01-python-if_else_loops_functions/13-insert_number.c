@@ -25,7 +25,7 @@ listint_t *insert_node(listint_t **head, int number)
 		(*head) = newnode;
 		return (newnode);
 	}
-	if ((*head)->n > number)
+	if ((*head)->n >= number)
 	{
 		newnode->next = (*head);
 		(*head) = newnode;
@@ -38,13 +38,13 @@ listint_t *insert_node(listint_t **head, int number)
 		rabbit = rabbit->next->next;
 		if (rabbit->n < number)
 			turtle = rabbit;
-		else if (turtle->next->n < number)
+		else if (turtle->next->n <= number)
 		{
 			newnode->next = turtle->next->next;
 			turtle->next->next = newnode;
 			return (newnode);
 		}
-		else if (turtle->n < number)
+		else if (turtle->n <= number)
 		{
 			newnode->next = turtle->next;
 			turtle->next = newnode;
@@ -56,7 +56,7 @@ listint_t *insert_node(listint_t **head, int number)
 		rabbit->next = newnode;
 		return (newnode);
 	}
-	if (rabbit->next->n > number)
+	if (rabbit->next->n >= number)
 	{
 		rabbit->next->next = newnode;
 		return (newnode);
