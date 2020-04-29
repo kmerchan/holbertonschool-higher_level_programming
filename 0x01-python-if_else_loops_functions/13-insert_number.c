@@ -27,8 +27,8 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	if ((*head)->n > number)
 	{
-		newnode->next = (*head)->next;
-		(*head)->next = newnode;
+		newnode->next = (*head);
+		(*head) = newnode;
 		return (newnode);
 	}
 	turtle = (*head);
