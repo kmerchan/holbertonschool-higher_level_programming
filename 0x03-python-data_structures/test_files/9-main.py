@@ -6,3 +6,6 @@ max_value = max_integer(my_list)
 print("Max: {}".format(max_value))
 max_value = max_integer()
 print("Max: {}".format(max_value))
+new_list = [-1, -2, -3, -4]
+max_value = max_integer(new_list)
+print("Max: {}".format(max_value))
