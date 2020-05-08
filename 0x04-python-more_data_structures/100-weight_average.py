@@ -9,4 +9,4 @@ def weight_average(my_list=[]):
         average = summation / count
         return (average)
     else:
-        return (0) 
+        return (0)
