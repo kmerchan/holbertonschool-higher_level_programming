@@ -6,5 +6,5 @@ This directory contains initial work with Python exceptions:
 2. Writing a Python funciton that prints the first x elements of a list and only integers
 3. Writing a Python function that divides two integers and prints the result, with try: / except: / finally:
 4. Writing a Python function that divides two lists element-by-element with try: / except: / finally:
-5. Writing a Python function to raise an exception
+5. Writing a Python function to raise a type exception
 6. Writing a Python function that raises a name exception with a message
