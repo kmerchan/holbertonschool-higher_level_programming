@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""creates empty class Square"""
+"""creates class Square with private instance attribute size"""
 
 
 class Square:
