@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/usr/include/python3.5/Python.h"
+#include <Python.h>
 
 /**
  * print_python_list - function to print information about Python lists
