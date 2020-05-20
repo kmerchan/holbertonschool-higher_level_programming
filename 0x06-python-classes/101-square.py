@@ -7,8 +7,6 @@ public instance methods to calculate area and print square"""
 class Square:
     """defines class with private instance attributes size and position
 and public instance methods to calculate area and print square."""
-    __size = 0
-    __position = (0, 0)
 
     def __init__(self, size=0, position=(0, 0)):
         """instantiates attribute size to 0 and position to (0, 0)"""
