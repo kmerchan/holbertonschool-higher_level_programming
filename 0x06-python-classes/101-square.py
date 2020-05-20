@@ -83,8 +83,6 @@ and public instance methods to calculate area and print square."""
                     square_string = square_string + "#"
                 if row is not (self.__size - 1):
                     square_string = square_string + "\n"
-        else:
-            square_string = "\n"
         return square_string
 
     def __repr__(self):
