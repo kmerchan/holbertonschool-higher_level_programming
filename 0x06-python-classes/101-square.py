@@ -72,8 +72,8 @@ and public instance methods to calculate area and print square."""
 
     def my_print_string(self):
         """formats returnable string like my_print"""
+        square_string = ""
         if self.__size > 0:
-            square_string = ""
             for y in range(self.__position[1]):
                 square_string = square_string + "\n"
             for row in range(self.__size):
