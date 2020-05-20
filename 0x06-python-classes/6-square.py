@@ -9,15 +9,18 @@ class Square:
 and public instance methods to calculate area and print square."""
 
     def __init__(self, size=0, position=(0, 0)):
+        """instantiates attribute size to 0 and position to (0, 0)"""
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
+        """get the private instance attribute size"""
         return(self.__size)
 
     @size.setter
     def size(self, value):
+        """sets the private instance attribute size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -26,10 +29,12 @@ and public instance methods to calculate area and print square."""
 
     @property
     def position(self):
+        """gets the private instance attribute position"""
         return(self.__position)
 
     @position.setter
     def position(self, value):
+        """sets the private instance attribute position"""
         if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) is not 2:
