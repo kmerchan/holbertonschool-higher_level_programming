@@ -10,8 +10,8 @@ and public instance methods to calculate area and print square."""
 
     def __init__(self, size=0, position=(0, 0)):
         """instantiates attribute size to 0 and position to (0, 0)"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -35,15 +35,17 @@ and public instance methods to calculate area and print square."""
     @position.setter
     def position(self, value):
         """sets the private instance attribute position"""
-        if type(value) is not tuple:
+        check = 0
+        if type(value) is not tuple or len(value) is not 2:
+            check += 1
+        if type(value[0]) is not int or type(value[1]) is not int:
+            check += 1
+        if value[0] < 0 or value[1] < 0:
+            check += 1
+        if check is 0:
+            self.__position = value
+        else:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) is not 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(value[0]) is not int or type(value[1]) is not int:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
 
     def area(self):
         """calculates and returns current square area"""
