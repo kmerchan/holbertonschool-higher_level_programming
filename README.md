@@ -62,7 +62,7 @@ This directory contains initial work with Python lists and tuples:
 13. Technical Interview Preparation:
 Writing a C function that checks if a singly linked list is a palindrome
 
-##0x04-python-more_data_structures
+## 0x04-python-more_data_structures
 This directory contains initial work in Python with sets and dictionaries:
 0. Writing a Python function that computes the square value of all integers of a matrix
 1. Writing a Python function that replaces all occurances of an element by another in a new list
@@ -100,3 +100,12 @@ This directory contains initial work with Python classes:
 4. Writing a class 'Square' that defines a square by private instance attribute size, sets property of size, optionally instantiates size, and creates public instance method to calculate area
 5. Writing a class 'Square' that defines a square by private instance attribute size, sets property of size, optionally instantiates size, and creates public instance methods to calculate area and print the square using '#'
 6. Writing a class 'Square' that defines a square by private instance attributes size and position, sets property of size, optionally instantiates size and position, and creates public instance methods to calculate area and print the square using '#'
+
+## 0x07-python-test_driven_development
+This directory contains initial work with writing tests in Python and accounting for edge cases:
+0. Writing a function that adds 2 integers and an interactive test file to check for edge cases
+1. Writing a function that divides all elements of a matrix and an interactive test file to check for edge cases
+2. Writing a function that prints first and last name as strings and an interactive test file to check for edge cases
+3. Writing a function that prints a square with the "#" character and an interactive test file to check for edge cases
+4. Writing a function that prints a text string with 2 new lines after certain characters and an interactive test file to check for edge cases
+5. Writing Python Unittests to complement the interactive tests made in other tasks
