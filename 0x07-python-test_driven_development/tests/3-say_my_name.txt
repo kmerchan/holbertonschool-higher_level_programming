@@ -1,0 +1,53 @@
+============================
+doctest for 3-say_my_name.py
+============================
+``say_my_name()`` prints "My name is <first name> <last name>"
+
+TEST CONDITIONS
+===============
+
+testing printing two given strings
+::
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Betty", "Holberton")
+My name is Betty Holberton
+
+testing printing input first name string with default last name empty string
+::
+>>> say_my_name("Holberton")
+My name is Holberton 
+
+testing empty string arguments
+::
+>>> say_my_name("", "")
+My name is  
+
+testing None argument for first_name
+::
+>>> say_my_name(None, "Last")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+testing None argument for last_name
+::
+>>> say_my_name("First", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+testing argument of incorrect type for first_name
+::
+>>> say_my_name(1, "Last")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+testing argument of incorrect type for last_name
+::
+>>> say_my_name("First", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+testing boolean argument for first_name
+::
+>>> say_my_name(True, "Last")
+Traceback (most recent call last):
+TypeError: first_name must be a string
