@@ -3,6 +3,7 @@ This respository contains work with higher-level programming as part of Holberto
 
 ## 0x00-python-hello_world
 This directory contains initial work with Python:
+
 0. Writing a Shell script to run a Python script
 1. Writing a Shell script to run Python code
 2. Writing a Python script to print quote
@@ -18,6 +19,7 @@ Without help of Google, writing a C program to check if singly linked list conta
 
 ## 0x01-python-if_else_loops_functions
 This directory contains initial work with Python loops and conditional statements in functions.
+
 0. Completing Python code to print whether the number stored in a variable is positive or negative
 1. Completing Python code to print the last digit of a number stored in a variable
 2. Writing a Python program to print the alphabet in lowercase
@@ -37,6 +39,7 @@ Writing a C function that inserts a number into a sorted singly linked list
 
 ## 0x02-python-import_modules
 This directory contains initial Python work with importing functions and creating modules:
+
 0. Writing a Python program to import function def add(a, b) and prints the result of 1 + 2 using the function
 1. Writing a Python program that imports functions from a file and uses functions to calculate mathematics
 2. Writing a Python program that prints that number of and the list of its arguments
@@ -46,6 +49,7 @@ This directory contains initial Python work with importing functions and creatin
 
 ## 0x03-python-data_structures
 This directory contains initial work with Python lists and tuples:
+
 0. Writing a Python function to print all integers of a list using str.format()
 1. Writing a Python function that retrieves an element from a list at a given index
 2. Writing a Python function that replaces an element of a list at a given index
@@ -64,6 +68,7 @@ Writing a C function that checks if a singly linked list is a palindrome
 
 ## 0x04-python-more_data_structures
 This directory contains initial work in Python with sets and dictionaries:
+
 0. Writing a Python function that computes the square value of all integers of a matrix
 1. Writing a Python function that replaces all occurances of an element by another in a new list
 2. Writing a Python function that adds all unique integers in a list
@@ -103,9 +108,24 @@ This directory contains initial work with Python classes:
 
 ## 0x07-python-test_driven_development
 This directory contains initial work with writing tests in Python and accounting for edge cases:
+
 0. Writing a function that adds 2 integers and an interactive test file to check for edge cases
 1. Writing a function that divides all elements of a matrix and an interactive test file to check for edge cases
 2. Writing a function that prints first and last name as strings and an interactive test file to check for edge cases
 3. Writing a function that prints a square with the "#" character and an interactive test file to check for edge cases
 4. Writing a function that prints a text string with 2 new lines after certain characters and an interactive test file to check for edge cases
 5. Writing Python Unittests to complement the interactive tests made in other tasks
+
+## 0x08-python-more_classes
+This directory contains additional work with Python classes:
+
+0. Writing an empty class to define a rectangle
+1. Writing a Rectangle class with private instance attributes width and height, instantiated with property getter and setter
+2. Writing a Rectangle class with private instance attributes width and height and public instance methods to calculate area and perimeter
+3. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, and the ability to print() and str() the rectangle
+4. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, and the ability to print(), str(), repr(), and eval() the rectangle
+5. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, the ability to print(), str(), repr(), and eval() the rectangle, and the ability to be deleted with message
+6. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, the ability to print(), str(), repr(), and eval() the rectangle, the ability to be deleted with message, and the public class attribute number_of_instances
+7. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, the ability to print(), str(), repr(), and eval() the rectangle, the ability to be deleted with message, and the public class attributes number_of_instances and print_symbol
+8. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, the ability to print(), str(), repr(), eval(), and compare the rectangle, the ability to be deleted with message, and the public class attributes number_of_instances and print_symbol
+9. Writing a Rectangle class with private instance attributes width and height, public instance methods to calculate area and perimeter, the ability to print(), str(), repr(), eval(), and compare the rectangle, the ability to be deleted with message, the public class attributes number_of_instances and print_symbol, and class method to return new rectangle as a square
