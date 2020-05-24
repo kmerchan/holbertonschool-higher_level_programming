@@ -1,0 +1,209 @@
+==========================
+doctest for 3-rectangle.py
+==========================
+class Rectangle defines a rectangle
+
+IMPORTING RECTANGLE CLASS
+=========================
+>>> Rectangle = __import__('3-rectangle').Rectangle
+
+TEST CONDITIONS for 1-rectangle.py
+==================================
+
+testing Rectangle instance with default width and height
+::
+>>> my_rectangle_1 = Rectangle()
+>>> print(my_rectangle_1.width)
+0
+>>> print(my_rectangle_1.height)
+0
+
+testing Rectangle instance with setting width and height at instantiation
+::
+>>> my_rectangle_2 = Rectangle(1111, 33)
+>>> print(my_rectangle_2.width)
+1111
+>>> print(my_rectangle_2.height)
+33
+
+testing Rectangle instance with setting width and height after instantiation
+::
+>>> my_rectangle_3 = Rectangle()
+>>> my_rectangle_3.width = 10
+>>> my_rectangle_3.height = 30
+>>> print(my_rectangle_3.width)
+10
+>>> print(my_rectangle_3.height)
+30
+
+testing Rectangle instantiation with incorrect type for height
+::
+>>> try:
+...     my_rectangle_4 = Rectangle(1, "3")
+... except Exception as err:
+...     print(err)
+height must be an integer
+
+testing Rectangle instantiation with incorrect type for width
+::
+>>> try:
+...     my_rectangle_5 = Rectangle("1", 3)
+... except Exception as err:
+...     print(err)
+width must be an integer
+
+testing Rectangle instantiation with incorrect value for height
+::
+>>> try:
+...     my_rectangle_6 = Rectangle(1, -3)
+... except Exception as err:
+...     print(err)
+height must be >= 0
+
+testing Rectangle instantiation with incorrect type for width
+::
+>>> try:
+...     my_rectangle_7 = Rectangle(-1, 3)
+... except Exception as err:
+...     print(err)
+width must be >= 0
+
+testing Rectangle setting incorrect type for height after instantiation
+::
+>>> try:
+...     my_rectangle_8 = Rectangle(1, 3)
+...     my_rectangle_8.height = 3.14159
+... except Exception as err:
+...     print(err)
+height must be an integer
+
+testing Rectangle setting incorrect type for width after instantiation
+::
+>>> try:
+...     my_rectangle_9 = Rectangle(1, 3)
+...     my_rectangle_9.width = 3.14159
+... except Exception as err:
+...     print(err)
+width must be an integer
+
+testing Rectangle setting incorrect value for height after instantiation
+::
+>>> try:
+...     my_rectangle_10 = Rectangle(1, 3)
+...     my_rectangle_10.height = -2
+... except Exception as err:
+...     print(err)
+height must be >= 0
+
+testing Rectangle setting incorrect value for width after instantiation
+::
+>>> try:
+...     my_rectangle_11 = Rectangle(1, 3)
+...     my_rectangle_11.width = -2
+... except Exception as err:
+...     print(err)
+width must be >= 0
+
+ADDITIONAL TEST CONDITIONS for 2-rectangle.py
+=============================================
+
+testing Rectangle methods area and perimeter
+::
+>>> my_rectangle_12 = Rectangle(4, 5)
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_12.area(), my_rectangle_12.perimeter()))
+area: 20
+perimeter: 18
+
+testing Rectangle methods area and perimeter with incorrect setter before method call
+::
+>>> my_rectangle_13 = Rectangle(4, 5)
+>>> my_rectangle_13.width = -4
+Traceback (most recent call last):
+ValueError: width must be >= 0
+>>> my_rectangle_13.height = "20"
+Traceback (most recent call last):
+TypeError: height must be an integer
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_13.area(), my_rectangle_13.perimeter()))
+area: 20
+perimeter: 18
+
+testing Rectangle methods area and perimeter when width and height are both 0
+::
+>>> my_rectangle_14 = Rectangle(0, 0)
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_14.area(), my_rectangle_14.perimeter()))
+area: 0
+perimeter: 0
+
+ADDITIONAL TEST CONDITIONS for 3-rectangle.py
+=============================================
+
+testing Rectangle printing with both print() and str()
+::
+>>> my_rectangle_15 = Rectangle(3, 5)
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_15.area(), my_rectangle_15.perimeter()))
+area: 15
+perimeter: 16
+>>> print(my_rectangle_15)
+###
+###
+###
+###
+###
+>>> print(str(my_rectangle_15))
+###
+###
+###
+###
+###
+
+testing Rectangle printing with both print() and str() when width and height both 0
+::
+>>> my_rectangle_16 = Rectangle()
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_16.area(), my_rectangle_16.perimeter()))
+area: 0
+perimeter: 0
+>>> print(my_rectangle_16)
+<BLANKLINE>
+>>> print(str(my_rectangle_16))
+<BLANKLINE>
+
+testing Rectangle printing with print() and str() when width is 0
+::
+>>> my_rectangle_17 = Rectangle(0, 5)
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_17.area(), my_rectangle_17.perimeter()))
+area: 0
+perimeter: 0
+>>> print(my_rectangle_17)
+<BLANKLINE>
+>>> print(str(my_rectangle_17))
+<BLANKLINE>
+
+testing Rectangle printing with print() and str() when height is 0
+::
+>>> my_rectangle_18 = Rectangle(5, 0)
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_18.area(), my_rectangle_18.perimeter()))
+area: 0
+perimeter: 0
+>>> print(my_rectangle_18)
+<BLANKLINE>
+>>> print(str(my_rectangle_18))
+<BLANKLINE>
+
+testing Rectangle printing with print() and str() with incorrect setting before:
+::
+>>> my_rectangle_19 = Rectangle(8, 2)
+>>> my_rectangle_19.width = "1000"
+Traceback (most recent call last):
+TypeError: width must be an integer
+>>> my_rectangle_19.height = -65
+Traceback (most recent call last):
+ValueError: height must be >= 0
+>>> print("area: {}\nperimeter: {}".format(my_rectangle_19.area(), my_rectangle_19.perimeter()))
+area: 16
+perimeter: 20
+>>> print(my_rectangle_19)
+########
+########
+>>> print(str(my_rectangle_19))
+########
+########
