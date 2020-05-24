@@ -1,0 +1,96 @@
+==========================
+doctest for 1-rectangle.py
+==========================
+class Rectangle defines a rectangle
+
+TEST CONDITIONS
+===============
+
+testing Rectangle instance with default width and height
+::
+>>> Rectangle = __import__('1-rectangle').Rectangle
+>>> my_rectangle_1 = Rectangle()
+>>> print(my_rectangle_1.__dict__)
+{'_Rectangle__width': 0, '_Rectangle__height': 0}
+
+testing Rectangle instance with setting width and height at instantiation
+::
+>>> my_rectangle_2 = Rectangle(1111, 33)
+>>> print(my_rectangle_2.__dict__)
+{'_Rectangle__width': 1111, '_Rectangle__height': 33}
+
+testing Rectangle instance with setting width and height after instantiation
+::
+>>> my_rectangle_3 = Rectangle()
+>>> my_rectangle_3.width = 10
+>>> my_rectangle_3.height = 30
+>>> print(my_rectangle_3.__dict__)
+{'_Rectangle__width': 10, '_Rectangle__height': 30}
+
+testing Rectangle instantiation with incorrect type for height
+::
+>>> try:
+...     my_rectangle_4 = Rectangle(1, "3")
+... except Exception as err:
+...     print(err)
+height must be an integer
+
+testing Rectangle instantiation with incorrect type for width
+::
+>>> try:
+...     my_rectangle_5 = Rectangle("1", 3)
+... except Exception as err:
+...     print(err)
+width must be an integer
+
+testing Rectangle instantiation with incorrect value for height
+::
+>>> try:
+...     my_rectangle_6 = Rectangle(1, -3)
+... except Exception as err:
+...     print(err)
+height must be >= 0
+
+testing Rectangle instantiation with incorrect type for width
+::
+>>> try:
+...     my_rectangle_7 = Rectangle(-1, 3)
+... except Exception as err:
+...     print(err)
+width must be >= 0
+
+testing Rectangle setting incorrect type for height after instantiation
+::
+>>> try:
+...     my_rectangle_8 = Rectangle(1, 3)
+...     my_rectangle_8.height = 3.14159
+... except Exception as err:
+...     print(err)
+height must be an integer
+
+testing Rectangle setting incorrect type for width after instantiation
+::
+>>> try:
+...     my_rectangle_9 = Rectangle(1, 3)
+...     my_rectangle_9.width = 3.14159
+... except Exception as err:
+...     print(err)
+width must be an integer
+
+testing Rectangle setting incorrect value for height after instantiation
+::
+>>> try:
+...     my_rectangle_10 = Rectangle(1, 3)
+...     my_rectangle_10.height = -2
+... except Exception as err:
+...     print(err)
+height must be >= 0
+
+testing Rectangle setting incorrect value for width after instantiation
+::
+>>> try:
+...     my_rectangle_8 = Rectangle(1, 3)
+...     my_rectangle_8.width = -2
+... except Exception as err:
+...     print(err)
+width must be >= 0
