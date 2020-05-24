@@ -47,4 +47,6 @@ and public instance methods to return the rectangle area and primeter"""
 
     def perimeter(self):
         """calculates perimeter of the rectangle"""
+        if self.width == 0 or self.height == 0:
+            return 0
         return ((2 * self.width) + (2 * self.height))
