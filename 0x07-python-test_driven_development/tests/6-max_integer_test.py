@@ -16,6 +16,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer([1, 1, 3, 3, 3, 6, 8, 8]), 8)
         self.assertEqual(max_integer([-1, -2, -3]), -1)
+        self.assertEqual(max_integer([1, 2, 3, 4, 3, 2, 1]), 4)
 
     def test_errors(self):
         """tests errors raised by incorrect type arguments"""
