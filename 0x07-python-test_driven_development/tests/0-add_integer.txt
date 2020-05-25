@@ -114,3 +114,9 @@ testing how add_integer function handles if 1 argument is list
 >>> add_integer([6], 1)
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+testing how add_integer function handles float NaN argument
+::
+>>> add_integer(float("NaN"), 1)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
