@@ -12,6 +12,7 @@ and prints message when deleted"""
 
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """instantiates class instance with optional width/height attributes"""
         self.width = width

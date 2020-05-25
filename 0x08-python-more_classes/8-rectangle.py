@@ -13,6 +13,7 @@ and static method to compare and return the largest rectangle based on area"""
 
     number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """instantiates class instance with optional width/height attributes"""
         self.width = width

@@ -11,6 +11,7 @@ and returns representation of the rectangle to be used by eval()
 and prints message when deleted"""
 
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """instantiates class instance with optional width/height attributes"""
         self.width = width
