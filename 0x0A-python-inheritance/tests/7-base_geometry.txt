@@ -1,0 +1,16 @@
+==============================
+doctest for 7-base_geometry.py
+==============================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+TEST CONDITIONS
+===============
+
+testing area method
+::
+>>> try:
+...     BaseGeomtry.area()
+... except Exception as err:
+...     print(err)
+area() is not implemented
