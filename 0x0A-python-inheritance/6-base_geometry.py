@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines class BaseGeomtry with public class method for area"""
+"""defines class BaseGeomtry with public instance method for area"""
 
 
 class BaseGeometry:
