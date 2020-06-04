@@ -13,4 +13,12 @@ class Student():
 
     def to_json(self, attrs=None):
         """returns dictionary descript for JSON serialization"""
-        return self.__dict__
+        if type(attrs) is list:
+            new_dict = {}
+            for key in self.__dict__:
+                for key2 in attrs:
+                    if key == key2:
+                        new_dict[key] = self.__dict__[key]
+            return new_dict
+        else:
+            return self.__dict__
