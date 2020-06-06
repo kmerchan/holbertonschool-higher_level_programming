@@ -8,6 +8,11 @@ doctest for 7-base_geometry.py
 TEST CONDITIONS
 ===============
 
+testing instantiation
+::
+>>> print(bg.__dict__)
+{}
+
 testing area method
 ::
 >>> try:
@@ -46,3 +51,27 @@ testing integer_validator method with ValueError
 ... except Exception as err:
 ...     print(err)
 x must be greater than 0
+
+testing integer_validator method with no arguments
+::
+>>> try:
+...     bg.integer_validator()
+... except Exception as err:
+...     print(err)
+integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+testing integer_validator method with only one argument
+::
+>>> try:
+...     bg.integer_validator("x")
+... except Exception as err:
+...     print(err)
+integer_validator() missing 1 required positional argument: 'value'
+
+testing integer_validator with None
+::
+>>> try:
+...     bg.integer_validator(None, None)
+... except Exception as err:
+...     print(err)
+None must be an integer
