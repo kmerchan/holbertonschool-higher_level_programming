@@ -25,9 +25,9 @@ class Student():
 
     def reload_from_json(self, json):
         for key in json:
-            if key is first_name:
+            if key == "first_name":
                 self.first_name = json[key]
-            if key is last_name:
+            if key == "last_name":
                 self.last_name = json[key]
-            if key is age:
+            if key == "age":
                 self.age = json[key]
