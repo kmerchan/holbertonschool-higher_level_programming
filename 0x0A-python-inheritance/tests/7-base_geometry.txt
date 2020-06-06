@@ -3,6 +3,7 @@ doctest for 7-base_geometry.py
 ==============================
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
 
 TEST CONDITIONS
 ===============
@@ -10,7 +11,7 @@ TEST CONDITIONS
 testing area method
 ::
 >>> try:
-...     BaseGeometry.area()
+...     bg.area()
 ... except Exception as err:
 ...     print(err)
 area() is not implemented
@@ -18,14 +19,22 @@ area() is not implemented
 testing integer_validator method
 ::
 >>> try:
-...     BaseGeometry.integer_validator("x", 1)
+...     bg.integer_validator("x", 1)
 ... except Exception as err:
 ...     print(err)
 
-testing integer_validator method with TypeError
+testing integer_validator method with TypeError float
 ::
 >>> try:
-...     BaseGeometry.integer_validator("x", 3.14159)
+...     bg.integer_validator("x", 3.14159)
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with TypeError string
+::
+>>> try:
+...     bg.integer_validator("x", "52")
 ... except Exception as err:
 ...     print(err)
 x must be an integer
@@ -33,7 +42,7 @@ x must be an integer
 testing integer_validator method with ValueError
 ::
 >>> try:
-...     BaseGeometry.integer_validator("x", -2)
+...     bg.integer_validator("x", -2)
 ... except Exception as err:
 ...     print(err)
 x must be greater than 0
