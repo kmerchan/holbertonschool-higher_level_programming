@@ -10,7 +10,7 @@ TEST CONDITIONS
 testing area method
 ::
 >>> try:
-...     BaseGeomtry.area()
+...     BaseGeometry.area()
 ... except Exception as err:
 ...     print(err)
 area() is not implemented
