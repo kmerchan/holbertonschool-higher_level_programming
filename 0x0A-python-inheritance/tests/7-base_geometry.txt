@@ -44,10 +44,50 @@ testing integer_validator method with TypeError string
 ...     print(err)
 x must be an integer
 
-testing integer_validator method with ValueError
+testing integer_validator method with TypeError tuple
+::
+>>> try:
+...     bg.integer_validator("x", (0,))
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with TypeError list
+::
+>>> try:
+...     bg.integer_validator("x", [7])
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with TypeError boolean
+::
+>>> try:
+...     bg.integer_validator("x", True)
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with TypeError set
+::
+>>> try:
+...     bg.integer_validator("x", {8})
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with ValueError negative
 ::
 >>> try:
 ...     bg.integer_validator("x", -2)
+... except Exception as err:
+...     print(err)
+x must be greater than 0
+
+testing integer_validator method with ValueError zero
+::
+>>> try:
+...     bg.integer_validator("x", 0)
 ... except Exception as err:
 ...     print(err)
 x must be greater than 0
