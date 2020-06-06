@@ -14,3 +14,26 @@ testing area method
 ... except Exception as err:
 ...     print(err)
 area() is not implemented
+
+testing integer_validator method
+::
+>>> try:
+...     BaseGeometry.integer_validator("x", 1)
+... except Exception as err:
+...     print(err)
+
+testing integer_validator method with TypeError
+::
+>>> try:
+...     BaseGeometry.integer_validator("x", 3.14159)
+... except Exception as err:
+...     print(err)
+x must be an integer
+
+testing integer_validator method with ValueError
+::
+>>> try:
+...     BaseGeometry.integer_validator("x", -2)
+... except Exception as err:
+...     print(err)
+x must be greater than 0
