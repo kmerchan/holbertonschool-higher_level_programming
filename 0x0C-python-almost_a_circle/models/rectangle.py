@@ -83,3 +83,10 @@ class Rectangle(Base):
         """prints in stdout the rectangle instance with '#'"""
         for row in range(self.height):
             print("#"*self.width)
+
+    def __str__(self):
+        """override __str__ with new string in the format
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        str_rep = "[Rectangle] ({}) {}/{} - {}/{}".format(str(self.id),
+        str(self.x), str(self.y), str(self.width), str(self.height))
+        return (str_rep)
