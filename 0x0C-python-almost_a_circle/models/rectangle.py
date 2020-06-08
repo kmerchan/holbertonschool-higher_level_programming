@@ -80,8 +80,12 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        """prints in stdout the rectangle instance with '#'"""
+        """prints in stdout the rectangle instance with '#'
+        with offsets x and y taken into account"""
+        for vertical in range(self.y):
+            print("")
         for row in range(self.height):
+            print(" "*self.x, end="")
             print("#"*self.width)
 
     def __str__(self):
