@@ -15,8 +15,8 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """gets private instance attribute size from width"""
-        return (self.width)
+        """gets private instance attribute size"""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
