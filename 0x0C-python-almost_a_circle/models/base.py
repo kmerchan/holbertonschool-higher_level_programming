@@ -31,11 +31,7 @@ class Base():
         list of instances who inherits from Base to a file"""
         if list_objs is None:
             list_objs = []
-        if str(cls) == "<class 'models.rectangle.Rectangle'>":
-            cls_name = "Rectangle"
-        if str(cls) == "<class 'models.square.Square'>":
-            cls_name = "Square"
-        filename = cls_name + ".json"
+        filename = cls.__name__ + ".json"
         list_dictionaries = []
         for instance in list_objs:
             list_dictionaries.append(instance.to_dictionary())
@@ -56,9 +52,22 @@ class Base():
     def create(cls, **dictionary):
         """returns an instance with all attributes already set
         using update method"""
-        if str(cls) == "<class 'models.rectangle.Rectangle'>":
+        if cls.__name__ == "Rectangle":
             instance = cls(1, 1, 0, 0)
-        if str(cls) == "<class 'models.square.Square'>":
+        if cls.__name__ == "Square":
             instance = cls(1, 0, 0)
         instance.update(**dictionary)
         return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """return list of instances from file containing saved JSON string"""
+        filename = cls.__name__ + ".json"
+        results = []
+        try:
+            with open(filename, 'r') as f:
+                for instance in cls.from_json_string(f.read()):
+                    results.append(cls.create(**instance))
+        except Exception as err:
+            pass
+        return (results)
