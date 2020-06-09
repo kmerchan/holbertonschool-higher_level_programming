@@ -16,7 +16,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """gets private instance attribute size"""
-        return (self.__size)
+        return (self.width)
 
     @size.setter
     def size(self, value):
@@ -29,7 +29,6 @@ class Square(Rectangle):
         else:
             self.width = value
             self.height = value
-            self.__size = value
 
     def __str__(self):
         """override __str__ with new string in the format
