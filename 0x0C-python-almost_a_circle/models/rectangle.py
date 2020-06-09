@@ -91,8 +91,9 @@ class Rectangle(Base):
     def __str__(self):
         """override __str__ with new string in the format
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        str_rep = "[Rectangle] ({}) {}/{} - {}/{}".format(str(self.id),
-        str(self.x), str(self.y), str(self.width), str(self.height))
+        str_rep = "[Rectangle] ({}) {}/{} - {}/{}".format(
+            str(self.id), str(self.x), str(self.y),
+            str(self.width), str(self.height))
         return (str_rep)
 
     def update(self, *args, **kwargs):
@@ -125,7 +126,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns dictionary representation of a Rectangle"""
-        dict_rep= {}
+        dict_rep = {}
         for key in self.__dict__:
             if "id" in key:
                 dict_rep["id"] = self.__dict__[key]

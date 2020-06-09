@@ -35,7 +35,7 @@ class Base():
         list_dictionaries = []
         for instance in list_objs:
             list_dictionaries.append(instance.to_dictionary())
-        with open(filename,'w') as f:
+        with open(filename, 'w') as f:
             f.write(cls.to_json_string(list_dictionaries))
 
     @staticmethod
