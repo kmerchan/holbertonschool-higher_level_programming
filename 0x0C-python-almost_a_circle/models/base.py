@@ -24,3 +24,20 @@ class Base():
         if len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representaiton of
+        list of instances who inherits from Base to a file"""
+        if list_objs is None:
+            list_objs = []
+        if str(cls) == "<class 'models.rectangle.Rectangle'>":
+            cls_name = "Rectangle"
+        if str(cls) == "<class 'models.square.Square'>":
+            cls_name = "Square"
+        filename = cls_name + ".json"
+        list_dictionaries = []
+        for instance in list_objs:
+            list_dictionaries.append(instance.to_dictionary())
+        with open(filename,'w') as f:
+            f.write(cls.to_json_string(list_dictionaries))
