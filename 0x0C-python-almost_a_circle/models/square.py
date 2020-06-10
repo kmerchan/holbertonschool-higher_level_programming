@@ -66,7 +66,7 @@ class Square(Rectangle):
         for key in self.__dict__:
             if "id" in key:
                 dict_rep["id"] = self.__dict__[key]
-            if "size" in key:
+            if "width" in key:
                 dict_rep["size"] = self.__dict__[key]
             if "x" in key:
                 dict_rep["x"] = self.__dict__[key]
