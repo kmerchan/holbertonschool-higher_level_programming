@@ -102,7 +102,7 @@ class Rectangle(Base):
         if args and len(args) != 0:
             for i in range(len(args)):
                 if i == 0:
-                    super().__init__(args[i])
+                    self.id = args[i]
                 if i == 1:
                     self.width = args[i]
                 if i == 2:
@@ -114,7 +114,7 @@ class Rectangle(Base):
         else:
             for kw in kwargs:
                 if kw == "id":
-                    super().__init__(kwargs[kw])
+                    self.id = (kwargs[kw])
                 if kw == "width":
                     self.width = (kwargs[kw])
                 if kw == "height":
