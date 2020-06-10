@@ -3,11 +3,12 @@
 
 
 import unittest
+import pep8
 
 from models.base import Base
 
-class TestBaseInit(unittest.TestCase):
-    """testing functions for Base __init__ method"""
+class TestBase(unittest.TestCase):
+    """testing functions for Base class"""
 
     def test_a_base_instantiation(self):
         """test initialization of id if id None and if id int"""
@@ -19,3 +20,7 @@ class TestBaseInit(unittest.TestCase):
         self.assertEqual(b3.id, 73)
         b4 = Base()
         self.assertEqual(b4.id, 3)
+
+    def test_pep8(self):
+        """test that code follows pep8 style guidelines"""
+        pep8style = pep8.StyleGuide(quiet=True)
