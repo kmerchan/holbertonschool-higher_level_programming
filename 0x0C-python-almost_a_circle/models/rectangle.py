@@ -127,15 +127,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns dictionary representation of a Rectangle"""
         dict_rep = {}
-        for key in self.__dict__:
-            if "id" in key:
-                dict_rep["id"] = self.__dict__[key]
-            if "width" in key:
-                dict_rep["width"] = self.__dict__[key]
-            if "height" in key:
-                dict_rep["height"] = self.__dict__[key]
-            if "x" in key:
-                dict_rep["x"] = self.__dict__[key]
-            if "y" in key:
-                dict_rep["y"] = self.__dict__[key]
+        dict_rep["id"] = self.id
+        dict_rep["width"] = self.width
+        dict_rep["height"] = self.height
+        dict_rep["x"] = self.x
+        dict_rep["y"] = self.y
         return dict_rep
