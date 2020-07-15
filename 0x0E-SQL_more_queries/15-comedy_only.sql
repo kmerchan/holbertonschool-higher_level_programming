@@ -1,5 +1,5 @@
--- lists all genres of tv show 'Dexter'
--- display as tv_genres.name
+-- lists all shows of genre 'Comedy'
+-- display as tv_shows.title
 SELECT tv.title
        FROM tv_show_genres AS tvg
        INNER JOIN tv_shows AS tv
