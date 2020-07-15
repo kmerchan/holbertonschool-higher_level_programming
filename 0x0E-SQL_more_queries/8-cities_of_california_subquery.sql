@@ -1,0 +1,2 @@
+-- lists all the cities of California in current database
+-- results sorted by cities.id in ascending order
