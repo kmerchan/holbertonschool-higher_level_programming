@@ -1,3 +1,8 @@
 -- lists all genres and count of number of shows linked to that genre
 -- display as tv_genres.name-count of tv shows linked to that genre
-SELECT g.`name`, COUNT(*) AS number FROM `tv_shows` AS s INNER JOIN `tv_show_genres` AS sg ON g.`id` = sg.`genre_id` GROUP BY WHERE g.`show_id` IS NULL ORDER BY s.`title` ASC;
+SELECT g.`name`, COUNT(*) AS number_of_shows
+       FROM `tv_genres` AS g
+       INNER JOIN `tv_show_genres` AS t
+       ON g.`id` = t.`genre_id`
+       GROUP BY t.genre_id
+       ORDER BY number_of_shows DESC;
