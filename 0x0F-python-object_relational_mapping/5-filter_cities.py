@@ -4,19 +4,20 @@ lists all cities from the database in ascending order
 matching state name passed in as argument using MySQLdb
 """
 if __name__ == "__main__":
-    import argv from sys
+    from sys import argv
     import MySQLdb
     db = MySQLdb.connect(host="localhost", user=argv[1],
                          passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT c.name FROM city AS c
-                WHERE s.name = argv[4]
-                INNER JOIN states AS s ON c.state_id = s.id
-                ORDER BY c.id ASC")
+    cur.execute("""SELECT c.name FROM cities AS c \
+                INNER JOIN states AS s ON c.state_id = s.id\
+                WHERE s.name = '{}' \
+                ORDER BY c.id ASC""".format(argv[4]))
     rows = cur.fetchall()
     for i, row in enumerate(rows, start=0):
         if i != 0:
             print(", ", end="")
-        print(row, end="")
+        print(row[0], end="")
+    print("")
     cur.close()
     db.close()
