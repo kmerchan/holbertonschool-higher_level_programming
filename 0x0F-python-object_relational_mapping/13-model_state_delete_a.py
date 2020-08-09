@@ -17,7 +17,6 @@ if __name__ == "__main__":
         session = Session()
         for instance in session.query(State).order_by(State.id):
                 if 'a' in instance.name:
-                        session.delete(instance.id)
-                        session.delete(instance.name)
+                        session.delete(instance)
         session.commit()
         session.close()
