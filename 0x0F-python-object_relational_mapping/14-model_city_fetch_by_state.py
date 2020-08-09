@@ -5,6 +5,7 @@ using SQLAlchemy and importing State and Base from model_state
 """
 from sys import argv
 from model_state import Base, State
+from model_city import City
 
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -15,8 +16,8 @@ if __name__ == "__main__":
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
-        for instance in session.query(City, State)
-        .join(State, City.state_id==State.id).order_by(City.id):
-                print("{}: ({}) {}"
-                      .format(instance[1].name, instance[0].id, instance[0].name))
+        for instance in session.query(City, State).join(
+                        State, City.state_id == State.id).order_by(City.id):
+                print("{}: ({}) {}".format(
+                        instance[1].name, instance[0].id, instance[0].name))
         session.close()
