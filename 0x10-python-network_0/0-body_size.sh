@@ -4,5 +4,5 @@ if [ $# -lt 1 ]
 then
     echo "Usage: 0-body_size.sh URL"
 else
-    curl -s "$1" | grep "Content-Length"
+    curl -sI "$1" | grep "Content-Length" | cut -d ' ' -f2
 fi
