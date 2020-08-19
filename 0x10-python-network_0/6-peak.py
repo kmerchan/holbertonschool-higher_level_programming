@@ -16,22 +16,18 @@ def find_peak(list_of_integers):
     middle = list_of_integers[mid]
     low = list_of_integers[0]
     high = list_of_integers[-1]
-    # print(list_of_integers)
-    # print("MIDDLE: {}".format(middle))
     if middle is low and middle is high:
         return middle
     if middle is low and middle > list_of_integers[mid + 1]:
         return middle
-    if middle is high and middle > list_of_integers[mid - 1]:
-        return middle
-    if middle > list_of_integers[mid - 1]:
-        if middle > list_of_integers[mid + 1]:
+    if middle > list_of_integers[mid + 1]:
+        if middle > list_of_integers[mid - 1]:
             return middle
         else:
-            peak_high = find_peak(list_of_integers[(mid + 1):])
-            if peak_high is not None:
-                return peak_high
+            peak_low = find_peak(list_of_integers[:mid])
+            if peak_low is not None:
+                return peak_low
     else:
-        peak_low = find_peak(list_of_integers[:mid])
-        if peak_low is not None:
-            return peak_low
+        peak_high = find_peak(list_of_integers[(mid + 1):])
+        if peak_high is not None:
+            return peak_high
