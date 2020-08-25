@@ -21,4 +21,4 @@ if __name__ == "__main__":
                 obj.get('commit').get('author').get('name')))
             count = count + 1
     except Exception as err:
-        print("Error is {}".format(err))
+        pass
