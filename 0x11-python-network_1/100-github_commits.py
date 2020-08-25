@@ -9,16 +9,13 @@ if __name__ == "__main__":
     from sys import argv
     url = 'https://api.github.com/repos/{}/{}/commits'.format(
         argv[1], argv[2])
-    try:
-        response = requests.get(url)
-        json_list = response.json()
-        count = 0
-        for obj in json_list:
-            if count == 10:
-                break
-            print("{}: {}".format(
-                obj.get('sha'),
-                obj.get('commit').get('author').get('name')))
-            count = count + 1
-    except Exception as err:
-        pass
+    response = requests.get(url)
+    json_list = response.json()
+    count = 0
+    for obj in json_list:
+        if count == 10:
+            break
+        print("{}: {}".format(
+            obj.get('sha'),
+            obj.get('commit').get('author').get('name')))
+        count = count + 1
