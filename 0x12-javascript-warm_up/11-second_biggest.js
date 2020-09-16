@@ -17,6 +17,8 @@ if (myArgs.length === 0 || myArgs.length === 1) {
     if (Number(myArgs[i]) >= Number(max)) {
       result = max;
       max = myArgs[i];
+    } else if (Number(myArgs[i]) >= Number(result)) {
+      result = myArgs[i];
     }
   }
   console.log(result);
