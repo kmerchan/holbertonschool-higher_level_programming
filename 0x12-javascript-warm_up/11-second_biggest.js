@@ -14,7 +14,7 @@ if (myArgs.length === 0 || myArgs.length === 1) {
     result = Number(myArgs[0]);
   }
   for (i = 2; i < myArgs.length; i++) {
-    if (Number(myArgs[i]) > max) {
+    if (Number(myArgs[i]) >= max) {
       result = max;
       max = Number(myArgs[i]);
     }
