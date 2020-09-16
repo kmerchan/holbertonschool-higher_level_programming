@@ -7,16 +7,16 @@ if (myArgs.length === 0 || myArgs.length === 1) {
   let max = 0;
   let result = 0;
   if (Number(myArgs[0]) > Number(myArgs[1])) {
-    max = Number(myArgs[0]);
-    result = Number(myArgs[1]);
+    max = myArgs[0];
+    result = myArgs[1];
   } else {
-    max = Number(myArgs[1]);
-    result = Number(myArgs[0]);
+    max = myArgs[1];
+    result = myArgs[0];
   }
   for (i = 2; i < myArgs.length; i++) {
-    if (Number(myArgs[i]) >= max) {
+    if (Number(myArgs[i]) >= Number(max)) {
       result = max;
-      max = Number(myArgs[i]);
+      max = myArgs[i];
     }
   }
   console.log(result);
