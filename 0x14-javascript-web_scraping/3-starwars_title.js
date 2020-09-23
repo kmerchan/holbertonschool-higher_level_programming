@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// script that displays the status code of a GET request
+// script that displays the title of the Star Wars movie using API
 const request = require('request');
 const myArgs = process.argv.slice(2);
 const URLstring = 'https://swapi-api.hbtn.io/api/films/' + myArgs[0];
