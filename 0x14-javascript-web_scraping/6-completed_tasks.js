@@ -11,10 +11,10 @@ request(myArgs[0], function (err, response, body) {
     let i = 0;
     for (i = 0; i < JSONbody.length; i++) {
       if (!(JSONbody[i].userId in result)) {
-	result[JSONbody[i].userId] = 0;
+        result[JSONbody[i].userId] = 0;
       }
       if (JSONbody[i].completed === false) {
-	result[JSONbody[i].userId] += 1;
+        result[JSONbody[i].userId] += 1;
       }
     }
     console.log(result);
