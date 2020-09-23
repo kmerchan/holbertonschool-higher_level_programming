@@ -12,11 +12,11 @@ request(URLstring, function (err, response, body) {
     for (i = 0; i < character.length; i++) {
       const URLcharacter = character[i];
       request(URLcharacter, function (err, response, body) {
-	if (err) {
-	  console.log(err);
-	} else {
-	  console.log(JSON.parse(body).name);
-	}
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(JSON.parse(body).name);
+        }
       });
     }
   }
