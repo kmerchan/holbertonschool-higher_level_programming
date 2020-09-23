@@ -16,6 +16,9 @@ request(myArgs[0], function (err, response, body) {
       if (JSONbody[i].completed === false) {
         result[JSONbody[i].userId] += 1;
       }
+      if (result[JSONbody[i].userID] === 0) {
+        delete result[JSONbody[i].userId];
+      }
     }
     console.log(result);
   }
