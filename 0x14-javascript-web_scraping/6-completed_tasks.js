@@ -16,7 +16,7 @@ request(myArgs[0], function (err, response, body) {
       if (JSONbody[i].completed) {
         result[JSONbody[i].userId] += 1;
       }
-      if (result[JSONbody[i].userID] === 0) {
+      if (result[JSONbody[i].userId] === 0) {
         delete result[JSONbody[i].userId];
       }
     }
