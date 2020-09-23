@@ -13,7 +13,7 @@ request(myArgs[0], function (err, response, body) {
       if (!(JSONbody[i].userId in result)) {
         result[JSONbody[i].userId] = 0;
       }
-      if (JSONbody[i].completed === false) {
+      if (JSONbody[i].completed === true) {
         result[JSONbody[i].userId] += 1;
       }
       if (result[JSONbody[i].userID] === 0) {
