@@ -1,4 +1,3 @@
-#!/usr/bin/node
 // script that changes the text of HTML header tag to "New Header!!!"
 // when the user clicks on the tag DIV#update_header
 // using jQuery API
