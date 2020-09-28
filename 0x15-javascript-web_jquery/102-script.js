@@ -4,9 +4,9 @@
 // using jQuery API
 $(document).ready(function () {
   $('INPUT#btn_translate').click(function () {
-    const URL = 'https://www.fourtonfish.com/hellosalut/?lang='
-	  + $('INPUT#language_code').val();
-    $.getJSON(URL, function (data) {
+    const URL = 'https://www.fourtonfish.com/hellosalut/?lang=';
+    const urlLang = URL + $('INPUT#language_code').val();
+    $.getJSON(urlLang, function (data) {
       $('DIV#hello').text(data.hello);
     });
   });
