@@ -11,3 +11,11 @@ This directory contains work with using Javascript to interact with HTML files a
 7. Javascript script that uses jQuery API and the Star Wars API to fetch and replace the name of a Star Wars API URL
 8. Javascript script that uses jQuery API and the Star Wars API to fetch and list all Star Wars movie titles
 9. Javascript script that uses jQuery API and the fourtonfish API to fetch and display the value of hello in the DIV#hello tag
+
+## Usage
+To utilize test files:
+* clone this repository with `git clone`
+* move into the repository with `cd`
+* move all test files into the current directory with `mv test_files/* .`
+* OR move specific files with `mv test_files/<filename> .`
+* the main.html file will import the Javascript code, showing the web dynamic
